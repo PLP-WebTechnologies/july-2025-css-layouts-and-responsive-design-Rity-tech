@@ -1,0 +1,88 @@
+/* Reset some styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+/* ----- Layout ----- */
+header {
+  background: #0077b6;  /* Medical blue */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header p {
+  font-size: 0.9rem;
+}
+
+nav {
+  background: #023e8a;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;   /* Content + Sidebar */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+main {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+aside {
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #0077b6;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ----- Media Queries ----- */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;  /* Stack content + sidebar */
+  }
+
+  nav {
+    flex-direction: column;     /* Stack nav items */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  nav {
+    font-size: 0.9rem;
+  }
+}
